@@ -184,6 +184,7 @@ body {
       "Jeanette_box"
       "Patrick_box"
       "Kira_box";
+    max-height: 100vh 
   }
   .Daniel {
     grid-area: Daniel;
