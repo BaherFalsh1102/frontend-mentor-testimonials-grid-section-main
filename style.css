@@ -1,0 +1,203 @@
+body {
+  background-color: #edf2f8;
+}
+
+/* 
+
+    - Container style
+
+*/
+
+.container {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 0.4fr 0.4fr 0.4fr 0.3fr;
+  grid-template-rows: 0.5fr 0.5fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "Daniel_box Daniel_box Jonathan_box Kira_box"
+    "Jeanette_box Patrick_box Patrick_box Kira_box";
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+
+    - Grouped styles
+
+*/
+
+.Daniel_box,
+.Jeanette_box,
+.Jonathan_box,
+.Kira_box,
+.Patrick_box {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 10px;
+  color: white;
+  -webkit-box-shadow: 0px 0px 15px -1px rgba(176, 166, 176, 1);
+  -moz-box-shadow: 0px 0px 15px -1px rgba(176, 166, 176, 1);
+  box-shadow: 0px 0px 15px -1px rgba(176, 166, 176, 1);
+  flex-wrap: nowrap;
+}
+
+.Daniel_box-title,
+.Jonathan_box-title,
+.Jeanette_box-title,
+.Patrick_box-title,
+.Kira_box-title {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  font-size: 13px;
+}
+
+.Daniel_box-title img,
+.Jonathan_box-title img,
+.Jeanette_box-title img,
+.Patrick_box-title img,
+.Kira_box-title img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  border: 2px solid gray;
+}
+
+.Daniel_box-title .info,
+.Jonathan_box-title .info,
+.Jeanette_box-title .info,
+.Patrick_box-title .info,
+.Kira_box-title .info {
+  line-height: 20px;
+}
+
+.Daniel_box-title .info .info-disc,
+.Jonathan_box-title .info .info-disc,
+.Jeanette_box-title .info .info-disc,
+.Patrick_box-title .info .info-disc,
+.Kira_box-title .info .info-disc {
+  opacity: 50%;
+}
+
+.Daniel_box .Daniel_box-bold-content,
+.Jeanette_box .Jeanette_box-bold-content,
+.Jonathan_box .Jonathan_box-bold-content,
+.Kira_box .Kira_box-bold-content,
+.Patrick_box .Patrick_box-bold-content {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.Daniel_box .Daniel_box-light-content,
+.Jeanette_box .Jeanette_box-light-content,
+.Jonathan_box .Jonathan_box-light-content,
+.Kira_box .Kira_box-light-content,
+.Patrick_box .Patrick_box-light-content {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 70%;
+}
+
+/* 
+
+    - Daniel_box styles
+
+*/
+
+.Daniel_box {
+  grid-area: Daniel_box;
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position-x: 85%;
+}
+
+.Daniel_box-title img {
+  border: 2px solid #a879e8;
+}
+
+/* 
+
+    - Jonathan_box styles
+
+*/
+
+.Jonathan_box {
+  grid-area: Jonathan_box;
+  background-color: hsl(217, 19%, 35%);
+}
+
+/* 
+
+    - Kira_box styles
+
+*/
+
+.Kira_box {
+  grid-area: Kira_box;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+
+/* 
+
+    - Jeanette_box styles
+
+*/
+
+.Jeanette_box {
+  grid-area: Jeanette_box;
+  background-color: hsl(0, 0%, 100%);
+  color: black;
+}
+
+/* 
+
+    - Patrick_box styles
+
+*/
+
+.Patrick_box {
+  grid-area: Patrick_box;
+  background-color: hsl(219, 29%, 14%);
+}
+
+.Patrick_box-title img {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 20px;
+    grid-template-areas:
+      "Daniel_box"
+      "Jonathan_box"
+      "Jeanette_box"
+      "Patrick_box"
+      "Kira_box";
+  }
+  .Daniel {
+    grid-area: Daniel;
+  }
+  .Jonathan {
+    grid-area: Jonathan;
+  }
+  .Jeanette {
+    grid-area: Jeanette;
+  }
+  .Patrick {
+    grid-area: Patrick;
+  }
+  .Kira {
+    grid-area: Kira;
+  }
+}
